@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class Lab6 {
+
+	public static void main(String[] args) {
+
+		// Displays greeting header and requests integer input from user
+		System.out.println("Welcome to the Factorial Calculator!");
+		System.out.println("Enter an integer that's greater than 0 but less than 10: ");
+
+		// Receives input from user
+		Scanner scan1 = new Scanner(System.in);
+
+		// Defines answer as a String variable set to yes 
+		// automatically continues unless n is input by user
+		String answer="y";
+		
+		// Loops the program if user enters y for yes
+		while (answer.equalsIgnoreCase("y")){
+		
+		
+		// Defines input from user as variable input
+		int input = scan1.nextInt();
+
+		// Checks the variable input to make sure it's between 1-10
+		if (input <= 10)
+			System.out.println(input);
+
+		// If integer is not between 1-10 asks user to input an integer between
+		// 1-10
+		else
+			System.out.println("Please enter an integer, from 1 - 10");
+
+		// Takes input from user, increments multiple by 1 defines input equal
+		// to new value for input
+		// Defines result as an integer
+		int result = 1;
+		for (int i = 1; i <= input; i++)
+			result = result * i;
+
+		// Prints out factorial
+		System.out.println("The Factorial of " + input + " is  " + result);
+		
+		// Asks user if they want to continue y or n
+		System.out.println("\nWould you like to continue? press y or n and then Enter: ");
+		Scanner scan2 = new Scanner(System.in);
+		answer=scan2.next();
+		
+		
+		}	
+	}
+}

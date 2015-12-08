@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Lab1 {
+
+	public static void main(String[] args) {
+		// Defines variables width & length
+		float width;
+		float length;
+		
+		/* 
+		 * Sets up Scanner for user input
+		 * defines scan1 as memory space to
+		 * capture & store user input to be
+		 * used for calculations and outputs
+		 * user input to console
+		 */
+		Scanner scan1 = new Scanner(System.in);
+		System.out.println("Enter Length");
+
+		length = scan1.nextFloat();
+
+		System.out.println("Enter Width");
+
+		width = scan1.nextFloat();
+
+		/* 
+		 * Formula for Rectangle Area A=WL
+		 * defines x as formula to calculate area
+		 * based on user input, outputs results
+		 * to console with label "Area: "
+		 */
+		
+		float x = length * width;
+
+		System.out.println("Area: " + x);
+
+		/* 
+		 * Formula for Rectangle Perimeter P=2(L+W)
+		 * defines y as formula to calculate perimeter
+		 * based on user input, outputs results
+		 * to console with label "Perimeter: "
+		 */
+		float y = 2 * (length + width);
+
+		System.out.println("Perimeter: " + y);
+
+	}
+
+}
